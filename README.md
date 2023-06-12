@@ -38,3 +38,9 @@ I will not publish executable binaries on the internet. Use [AutoHotKey](https:/
    - Race conditions can cause alt code numbers to get registered instead of character
    - Pretty much only the Linux console (not GUI) and Windows (but nnot all programs) support alt code input.
    - Unicode support (untested) depends intirely on the remote OS and application
+
+## Licenses
+
+### App icon `PPCH_dark_mixed.ico`
+Based on the [logo of the Pirate Party Switzerland](https://www.piratenpartei.ch/logos-und-fotos/). Slightly modified by myself.
+License: [CC BY 3.0 CH](https://creativecommons.org/licenses/by/3.0/ch/)

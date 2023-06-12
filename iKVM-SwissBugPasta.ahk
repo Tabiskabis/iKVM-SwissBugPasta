@@ -4,9 +4,20 @@ SetWorkingDir %A_ScriptDir% ; Ensure a consistent starting directory
 #NoEnv                      ; Recommended for performance and compatibility with future AutoHotkey releases
 #KeyHistory 0               ; Disable the key history (This script will mostly handle password)
 ListLines Off               ; Omit recently executed lines from history (Same again)
-;#NoTrayIcon                ; Don't show icon in task tray - probably not a very good idea?
 #SingleInstance Force       ; Force: reload script if already running
+#Persistent                 ; Do not exit script when actions are finished
 StringCaseSense On          ; Default is case insensitive match and replace -> NOPE
+
+; Replace default tray menu & icons
+Menu, Tray, Tip, Paste clipboard text contents with alt-shift-v
+Menu, Tray, NoStandard
+Menu, Tray, Add, Suspend HotKeys, PauseResume
+Menu, Tray, Add, Exit, QuitScript
+;@Ahk2Exe-AddResource PPCH_outlined_dark.ico
+;@Ahk2Exe-SetMainIcon PPCH_outlined_light.ico
+;@Ahk2Exe-IgnoreBegin
+	Menu, Tray, Icon, PPCH_outlined_light.ico
+;@Ahk2Exe-IgnoreEnd
 
 
 ; Individual Configuration (* is the suggested default)
@@ -265,3 +276,31 @@ SC035::ConvertAndSend("-")
 !^SC01b::ConvertAndSend("]")
 !^SC028::ConvertAndSend("{")
 !^SC02b::ConvertAndSend("}")
+
+
+; Script control functions
+
+PauseResume:
+	Suspend
+	if  (A_IsSuspended) {
+		Menu, Tray, Rename, Suspend HotKeys, Resume HotKeys
+		/*@Ahk2Exe-Keep
+			Menu, Tray, Icon, %A_ScriptFullPath%, 6, 1
+		 */
+		;@Ahk2Exe-IgnoreBegin
+			Menu, Tray, Icon, PPCH_outlined_dark.ico,, 1
+		;@Ahk2Exe-IgnoreEnd
+	} else {
+		Menu, Tray, Rename, Resume HotKeys, Suspend HotKeys
+		/*@Ahk2Exe-Keep
+			Menu, Tray, Icon, %A_ScriptFullPath%, 0, 1
+		*/
+		;@Ahk2Exe-IgnoreBegin
+			Menu, Tray, Icon, PPCH_outlined_light.ico,, 1
+		;@Ahk2Exe-IgnoreEnd
+	}
+Return
+
+QuitScript:
+	ExitApp
+Return
