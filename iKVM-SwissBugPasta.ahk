@@ -15,15 +15,18 @@ Menu, Tray, Add, Suspend HotKeys, PauseResume
 Menu, Tray, Add, Exit, QuitScript
 ;@Ahk2Exe-AddResource PPCH_outlined_dark.ico
 ;@Ahk2Exe-SetMainIcon PPCH_outlined_light.ico
+/*@Ahk2Exe-Keep
+	Menu, Tray, Icon, %A_ScriptFullPath%, 6, 1
+*/
 ;@Ahk2Exe-IgnoreBegin
-	Menu, Tray, Icon, PPCH_outlined_light.ico
+	Menu, Tray, Icon, PPCH_outlined_dark.ico
 ;@Ahk2Exe-IgnoreEnd
 
 ; EXE informational properties
 ;@Ahk2Exe-SetProductName AutoHotKey
 ;@Ahk2Exe-SetLegalTrademarks AHK executable: autohotkey.com
 ;@Ahk2Exe-SetCopyright AHK script by Tabiskabis: CC BY 3.0
-;@Ahk2Exe-SetDescription	Paste to iKVM and "fix" Swiss input
+;@Ahk2Exe-SetDescription	Swiss hotkeys for iKVM
 ;@Ahk2Exe-SetFileVersion	0.3.4.0
 
 
@@ -292,18 +295,18 @@ PauseResume:
 	if  (A_IsSuspended) {
 		Menu, Tray, Rename, Suspend HotKeys, Resume HotKeys
 		/*@Ahk2Exe-Keep
-			Menu, Tray, Icon, %A_ScriptFullPath%, 6, 1
+			Menu, Tray, Icon, %A_ScriptFullPath%, 0, 1
 		 */
 		;@Ahk2Exe-IgnoreBegin
-			Menu, Tray, Icon, PPCH_outlined_dark.ico,, 1
+			Menu, Tray, Icon, PPCH_outlined_light.ico,, 1
 		;@Ahk2Exe-IgnoreEnd
 	} else {
 		Menu, Tray, Rename, Resume HotKeys, Suspend HotKeys
 		/*@Ahk2Exe-Keep
-			Menu, Tray, Icon, %A_ScriptFullPath%, 0, 1
+			Menu, Tray, Icon, %A_ScriptFullPath%, 6, 1
 		*/
 		;@Ahk2Exe-IgnoreBegin
-			Menu, Tray, Icon, PPCH_outlined_light.ico,, 1
+			Menu, Tray, Icon, PPCH_outlined_dark.ico,, 1
 		;@Ahk2Exe-IgnoreEnd
 	}
 Return
