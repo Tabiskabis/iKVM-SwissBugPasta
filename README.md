@@ -1,6 +1,7 @@
 # iKVM-SwissBugPasta
 
-Lazy try of making Supermicro/Asus iKVM usable with a Swiss keyboard layout and enable clipboard pasting.
+Lazy try at enabling clipboard pasting in Supermicro/Asus iKVM and make it usable with a Swiss keyboard layout.  
+**ONLY for the specific case where both input layouts (yours and the remote machine's) are set to Switzerland (German).**
 
 ## Part 1: Workarounds for Swiss keyboard layout
 

@@ -19,6 +19,13 @@ Menu, Tray, Add, Exit, QuitScript
 	Menu, Tray, Icon, PPCH_outlined_light.ico
 ;@Ahk2Exe-IgnoreEnd
 
+; EXE informational properties
+;@Ahk2Exe-SetProductName AutoHotKey
+;@Ahk2Exe-SetLegalTrademarks AHK executable: autohotkey.com
+;@Ahk2Exe-SetCopyright AHK script by Tabiskabis: CC BY 3.0
+;@Ahk2Exe-SetDescription	Paste to iKVM and "fix" Swiss input
+;@Ahk2Exe-SetFileVersion	0.3.4.0
+
 
 ; Individual Configuration (* is the suggested default)
 
