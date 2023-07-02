@@ -42,6 +42,6 @@ I will not publish executable binaries on the internet. Use [AutoHotKey](https:/
 
 ## Licenses
 
-### App icon `PPCH_dark_mixed.ico`
+### App icons `PPCH*.ico`
 Based on the [logo of the Pirate Party Switzerland](https://www.piratenpartei.ch/logos-und-fotos/). Slightly modified by myself.
 License: [CC BY 3.0 CH](https://creativecommons.org/licenses/by/3.0/ch/)

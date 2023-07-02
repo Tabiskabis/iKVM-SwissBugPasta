@@ -13,6 +13,8 @@ Menu, Tray, Tip, Paste clipboard text contents with alt-shift-v
 Menu, Tray, NoStandard
 Menu, Tray, Add, Suspend HotKeys, PauseResume
 Menu, Tray, Add, Exit, QuitScript
+; Images under creative commons License CC BY 3.0 CH by Pirate Party Switzerland
+; https://www.piratenpartei.ch/logos-und-fotos/
 ;@Ahk2Exe-AddResource PPCH_outlined_dark.ico
 ;@Ahk2Exe-SetMainIcon PPCH_outlined_light.ico
 /*@Ahk2Exe-Keep
