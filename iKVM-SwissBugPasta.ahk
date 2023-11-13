@@ -240,7 +240,7 @@ SC035::ConvertAndSend("-")
 
 ; Only z/y are mappable
 *VK5a::VK59
-*VK59::VK59
+*VK59::VK5a
 
 ; Rest is alt codes
 
