@@ -181,14 +181,23 @@ SendClipboard(NativeSpecial) {
 ; Enable hotkey for sending clipboard
 
 #If WinActive("Java iKVM Viewer")
-!+v::SendClipboard(NativeSpecialJava)
+!+v::
+	Sleep, 250
+	SendClipboard(NativeSpecialJava)
+	return
 
 #If WinActive("Resolution:")
-!+v::SendClipboard(NativeSpecialHTML)
+!+v::
+	Sleep, 250
+	SendClipboard(NativeSpecialHTML)
+	return
 
 ; for all other programs, fall back to sending text-only clipboard with no smartassery
 #If PasteInOtherApps
-!+v::SendInput {Raw}%Clipboard%
+!+v::
+	Sleep, 250
+	SendInput {Raw}%Clipboard%
+	return
 
 
 ; Set of hotkeys for Asus iKVM Java app, when Swiss keyboard layout is active
